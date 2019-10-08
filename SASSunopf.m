@@ -187,7 +187,7 @@ while Nfes < MaxNfes
 
     
       if rem(gg,10) == 1
-%          fprintf('best-so-far objective function at %d th iteration = %1.8e\n',gg,BciFitVar);
+          fprintf('best-so-far objective function at %d th iteration = %1.8e\n',gg,BciFitVar);
       end
       BciIndex(gg) = BciFitVar;
 end 
