@@ -22,7 +22,8 @@ for Func = 1 : NumPrbs
     fprintf('\n-------------------------------------------------------\n')
     fprintf('Function = %d, Dimension size = %d\n', Func, ProblemSize);
     for run_id = 1 : Runs
-        [BciFitVar, BciSolution, BciIndex] = SSunopf(FHD, LU, PopSize, MaxNfes, PbestRate, rd, c, Func);
+%         [BciFitVar, BciSolution, BciIndex] = SSunopf(FHD, LU, PopSize, MaxNfes, PbestRate, rd, c, Func);
+         [BciFitVar, BciSolution, BciIndex] = SASSunopf(FHD, LU, [], MaxNfes, [], [], [],[],[], Func);
          bci_error_val = BciFitVar - Optimum;
          if bci_error_val < Val2Reach
             bci_error_val = 0;
